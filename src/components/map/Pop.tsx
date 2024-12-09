@@ -55,6 +55,10 @@ export default function Pop({ post }: { post: Post }) {
 
     return (
         <>
+        <div>
+        <span style={{color:'#00AAFF', fontWeight:'bold',fontFamily:'system-ui',fontSize:11}}>{post.title}</span>
+        <div style={{display:'flex'}}>
+
             <Avatar sx={{ bgcolor: red[500], width: 30, height: 30, marginRight: '6px', marginTop:'4px' }} aria-label="recipe">
                 R
             </Avatar>
@@ -95,6 +99,10 @@ export default function Pop({ post }: { post: Post }) {
                     </MenuItem>
                 </Menu>
             </div>
+        </div>
+        </div>
+
+
         </>
 
     );

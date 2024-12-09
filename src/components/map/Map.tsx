@@ -14,6 +14,7 @@ import { useSelector } from 'react-redux';
 
 export interface Post {
   id: string,
+  title:string,
   user_id: string,
   content: string,
   lat: number,
@@ -28,7 +29,7 @@ const customIcon = new L.Icon({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
   iconSize: [22, 35],
   iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
+  popupAnchor: [-1, -40],
   shadowSize: [41, 41],
 });
 
@@ -46,6 +47,7 @@ const Map: React.FC = () => {
         const data = post.data()
         return {
           id: post.id,
+          title:data.title,
           user_id: data.user_id,
           content: data.content,
           lat: data.lat,
@@ -61,6 +63,7 @@ const Map: React.FC = () => {
         const data = post.data()
         return {
           id: post.id,
+          title:data.title,
           user_id: data.user_id,
           content: data.content,
           lat: data.lat,
@@ -111,7 +114,7 @@ const Map: React.FC = () => {
       <MapContainer
         center={userLocation || [35.681236, 139.767125]} // ユーザーの現在地が取得できるまでデフォルト位置を使用
         zoom={13}
-        style={{ height: '80vh', width: '90%', position: 'relative' }}
+        style={{ height: '83vh', width: '90%', position: 'relative' }}
         ref={mapRef}
       >
         <TileLayer
@@ -181,8 +184,8 @@ function Pin({ post, refe }: { post: Post, refe: any }) {
             }
           }, 10000)
         } else {
-          refe.current.closePopup()
-          setIsOpen(false);
+          // refe.current.closePopup()
+          // setIsOpen(false);
         }
       }
     }, random * 1000)
@@ -201,6 +204,7 @@ function Pin({ post, refe }: { post: Post, refe: any }) {
         autoClose={false}
         closeOnClick={false}
         autoPan={false}
+        pane="overlayPane"
       >
         <Pop post={post}/>
       </StyledPopup>

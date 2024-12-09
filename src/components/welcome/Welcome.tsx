@@ -7,13 +7,13 @@ function Welcome() {
 
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", height: "100vh", width:"100vw" }}>
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center",  height: "100%", width:"100%" }}>
 
         <div className="d-flex">
           <Typography variant="h3" component="h3">
             Welcome To
           </Typography>
-          <img style={{width:"auto", height:"100px" }} src="/Title.png" alt="logo" width="300" height="100"/>
+          <img src="/Title.png" alt="logo" width="350" height="100"/>
 
 
         </div>
