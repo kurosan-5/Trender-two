@@ -35,6 +35,11 @@ function App() {
           navigate('/auth/signup')
           return
         }
+        else if (path == "/auth/signin") {
+          //ログインしていないがパスが/signup
+          navigate('/auth/signin')
+          return
+        }
         else if (path == "/auth/signup/sendEmail") {
           navigate('/auth/signup/sendEmail')
           return
