@@ -69,7 +69,7 @@ function App() {
       <AlertProvider>
         <ThemeProvider theme={theme}>
         <ShowAlert />
-        <div style={{marginTop:80, width:'100%', height:'100%'}}>
+        <div style={{marginTop:70, width:'100%'}}>
           <ResponsiveAppBar />
           <Routes>
             <Route path='/' element={<Welcome />} />

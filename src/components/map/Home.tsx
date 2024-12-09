@@ -3,7 +3,7 @@ import { auth, db } from "../../../firebase";
 import { useAuthActions } from '../../redux/auth/useActions';
 import { addDoc, getDocs, query, where } from "firebase/firestore";
 import { collection } from "firebase/firestore";
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 import Map from './Map';
 
 const Home = () => {
@@ -45,9 +45,9 @@ const Home = () => {
 
     return (
         <>
-            <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", width:'100%' }}>
+            <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", width:'100%' }}>
                 <Map />
-            </Container>
+            </Box>
         </>
     )
 }

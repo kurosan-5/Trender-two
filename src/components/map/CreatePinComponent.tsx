@@ -8,12 +8,12 @@ import L from "leaflet";
 
 // マーカーアイコンのカスタム設定
 const customRedIcon = new L.Icon({
-    iconUrl: '/customMarker.png',
+    iconUrl: '/arrowmarker.svg',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-    iconSize: [60,60],
-    iconAnchor: [30, 41],
+    iconSize: [90,50],
+    iconAnchor: [45, 41],
     popupAnchor: [1, -34],
-    shadowAnchor:[10,35],
+    shadowAnchor:[10,40],
     shadowSize: [41, 41],
   });
   

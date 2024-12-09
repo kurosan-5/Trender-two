@@ -121,7 +121,7 @@ function ResponsiveAppBar() {
 
     return (
         <AppBar position="fixed" sx={{padding:0}}>
-            <Container maxWidth="xl" sx={{maxWidth:1800}}>
+            <Box maxWidth="xl" sx={{marginLeft:'30px', marginRight:'30px',maxWidth:'2000px'}}>
                 <Toolbar disableGutters>
                     {!user ? null : <Box sx={{ flexGrow: 1, display: 'flex' }}>
                         <IconButton
@@ -198,7 +198,7 @@ function ResponsiveAppBar() {
                     <Divider />
                     {list(toggleDrawer)}
                 </Drawer>
-            </Container>
+            </Box>
         </AppBar>
     );
 }

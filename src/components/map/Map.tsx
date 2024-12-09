@@ -111,7 +111,7 @@ const Map: React.FC = () => {
       <MapContainer
         center={userLocation || [35.681236, 139.767125]} // ユーザーの現在地が取得できるまでデフォルト位置を使用
         zoom={13}
-        style={{ height: '85vh', width: '100%', position: 'relative' }}
+        style={{ height: '80vh', width: '90%', position: 'relative' }}
         ref={mapRef}
       >
         <TileLayer
