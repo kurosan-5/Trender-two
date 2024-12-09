@@ -184,8 +184,8 @@ function Pin({ post, refe }: { post: Post, refe: any }) {
             }
           }, 10000)
         } else {
-          // refe.current.closePopup()
-          // setIsOpen(false);
+          refe.current.closePopup()
+          setIsOpen(false);
         }
       }
     }, random * 1000)
