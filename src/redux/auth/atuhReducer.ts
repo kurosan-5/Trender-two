@@ -1,6 +1,6 @@
 import { myUser } from "./authType"
 
-interface AuthState {
+export interface AuthState {
     user: myUser | null
 }
 
@@ -9,7 +9,7 @@ const initialState : AuthState = {
 }
 
 type Action = {
-    type:"SETUSER"|"RESETUSER"
+    type:string
     payload?:myUser|null,
 }
 

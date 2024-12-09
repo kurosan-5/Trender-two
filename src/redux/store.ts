@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import authReducer from "./auth/atuhReducer";
+import authReducer, { AuthState } from "./auth/atuhReducer";
 
 // persistの設定
 const persistConfig = {
@@ -14,7 +14,11 @@ const persistConfig = {
 const rootReducer = combineReducers({
   auth: authReducer,
 });
-export type RootState = ReturnType<typeof rootReducer>;
+
+type RootState = {
+  auth: AuthState;
+};
+
 const persistedReducer = persistReducer<RootState>(persistConfig, rootReducer);
 
 // ストアを作成
