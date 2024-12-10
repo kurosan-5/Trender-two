@@ -5,7 +5,6 @@ import { PostButton } from "./buttons";
 import { red } from "@mui/material/colors";
 import styled from "@emotion/styled";
 import L from "leaflet";
-import HashTagInput from "./Hash";
 
 // マーカーアイコンのカスタム設定
 const customRedIcon = new L.Icon({
