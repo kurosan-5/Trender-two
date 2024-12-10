@@ -204,7 +204,6 @@ function Pin({ post, refe }: { post: Post, refe: any }) {
         autoClose={false}
         closeOnClick={false}
         autoPan={false}
-        pane="overlayPane"
       >
         <Pop post={post}/>
       </StyledPopup>
